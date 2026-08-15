@@ -1,0 +1,788 @@
+<!-- ======================================================================
+   
+     1.HOME PAGE
+
+====================================================================== -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍽️ FreshBite - Online Food Ordering</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+ </head>
+ <body>
+  <!-- Navigation Header -->
+  <header class="navbar">
+   <div class="logo">FreshBite 🍽️</div>
+   <button class ="hamburger" id="hamburger" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+   </button>
+   <nav class="nav-links">
+     <a href="index.html">Home</a>
+     <a href="restaurants.html">Restaurants</a>
+     <a href="menu.html">Menu</a>
+     <a href="checkout.html">Checkout</a>
+     <a href="account.html">Account</a>
+     <a href="login.html">Login</a>
+     <a href="about.html">About Us</a>
+     <a href="contact.html">Contact Us</a>
+     <a href="cart.html">Cart</a>
+   </nav>
+  </header>
+  <!-- Hero / Hero Section -->
+  <section id="home" class="hero">
+   <div class="hero-content">
+     <h1>Delicious Food Delivered To Your Doorstep</h1>
+     <p>Order fresh meals, pizzas, burgers, drinks and different food items in just a few clicks.</p>
+     <a href="restaurants.html">
+         <button>Order Now</button>
+     </a>
+   </div>
+  </section>
+  <!-- Restaurant Categories -->      
+   <section>
+     <h2>Restaurant Categories</h2>
+     <div>
+        <img src="images/pizza.jpg" alt="Pizza" width="150" height="150">
+        <h3>Pizza</h3>
+     </div>
+     <div>
+        <img src="images/burger.jpg" alt="Burger" width="150" height="150">
+        <h3>Burgers</h3>
+     </div>
+     <div>
+        <img src="images/indian.jpg" alt="Indian Food" width="150" height="150">
+        <h3>Indian</h3>
+     </div>
+     <div>
+        <img src="images/chinese.jpg" alt="Chinese Food" width="150" height="150">
+        <h3>Chinese</h3>
+     </div>
+     <div>
+        <img src="images/dessert.jpg" alt="Desserts" width="150" height="150">
+        <h3>Desserts</h3>
+     </div>
+   </section>
+  <!-- Featured Dishes -->
+   <section>
+     <h2>Featured Dishes</h2>
+     <article>
+        <img src="images/biryani.jpg" alt="Chicken Biryani" width="250">
+        <h3>Chicken Biryani</h3>
+        <p>Delicious basmati rice with chicken and spices.</p>
+        <p><strong>₹350</strong></p>
+        <button class="add-to-cart">Add to Cart</button>
+     </article>
+     <article>
+        <img src="images/pizza.jpg" alt="Margherita Pizza" width="250">
+        <h3>Margherita Pizza</h3>
+        <p>Fresh cheese, tomato sauce and basil.</p>
+        <p><strong>₹299</strong></p>
+        <button class="add-to-cart">Add to Cart</button>
+     </article>
+     <article>
+        <img src="images/burger.jpg" alt="Classic Burger" width="250">
+        <h3>Classic Burger</h3>
+        <p>Juicy burger with cheese and fresh vegetables.</p>
+        <p><strong>₹249</strong></p>
+        <button class="add-to-cart">Add to Cart</button>
+     </article>
+   </section>
+  <!-- Special Offers -->
+   <section>
+        <h2>Special Offers</h2>
+        <h3>🎉 50% OFF</h3>
+        <p>Get 50% off on your first order.</p>
+        <h3>🚚 FREE DELIVERY</h3>
+        <p>Free delivery on orders above ₹499.</p>
+        <h3>🍰 20% OFF DESSERTS</h3>
+        <p>Get 20% off on selected desserts.</p>
+   </section>
+   <footer>
+        <p>© 2026 FreshBite. All Rights Reserved.</p>
+   </footer>
+</body>
+</html>
+
+
+<!-- ========================================================
+
+     2.RESTAURANT LISTING
+
+======================================================== -->
+ 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants - FreshBite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>🍽️ FreshBite</h1>
+    <nav> 
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a href="account.html">Account</a>
+    </nav>
+</header>
+<h2>Restaurants</h2>
+<p>Find the best restaurants near you and order delicious food delivered to your doorstep.</p>
+<!-- Filters -->
+<section>
+    <h3>Filter Restaurants</h3>
+    <label>Cuisine:</label>
+    <select id="cuisine-filter">
+        <option value="all">All Cuisines</option>
+        <option value="Indian">Indian</option>
+        <option value="Italian">Italian</option>
+        <option value="Chinese">Chinese</option>
+        <option value="American">American</option>
+    </select>
+    <br><br>
+    <label>Rating:</label>
+    <select id="rating-filter">
+        <option value="all">All Ratings</option>
+        <option value="4">4 Stars & Above</option>
+        <option value="4.5">4.5 Stars & Above</option>
+    </select>
+    <br><br>
+    <label>Price:</label>
+    <select id="price-filter">
+        <option value="all">All Prices</option>
+        <option value="₹">₹</option>
+        <option value="₹₹">₹₹</option>
+        <option value="₹₹₹">₹₹₹</option>
+    </select>
+</section> 
+<!-- Restaurant Grid -->
+<section>
+    <article class="restaurant-card" data-cuisine="Indian" data-rating="4.8" data-price="₹₹">
+        <img src="images/restaurant1.jpg" alt="Spice Garden" width="300">
+        <h3>Spice Garden</h3>
+        <p>Indian • Biryani • Curry</p>
+        <p>⭐ 4.8</p>
+        <p>₹₹ • 25-35 min</p>
+        <a href="menu.html">
+            <button>View Menu</button>
+        </a>
+    </article>
+    <article class="restaurant-card" data-cuisine="Italian" data-rating="4.6" data-price="₹₹">
+        <img src="images/restaurant2.jpg" alt="Pizza Palace" width="300">
+        <h3>Pizza Palace</h3>
+        <p>Italian • Pizza • Pasta</p>
+        <p>⭐ 4.6</p>
+        <p>₹₹ • 20-30 min</p>
+        <a href="menu.html">
+            <button>View Menu</button>
+        </a>
+    </article>
+    <article class="restaurant-card" data-cuisine="American" data-rating="4.5" data-price="₹">
+        <img src="images/restaurant3.jpg" alt="Burger House" width="300">
+        <h3>Burger House</h3>
+        <p>American • Burgers • Fries</p>
+        <p>⭐ 4.5</p>
+        <p>₹ • 15-25 min</p>
+        <a href="menu.html">
+            <button>View Menu</button>
+        </a>
+    </article>
+    <article class="restaurant-card" data-cuisine="Chinese" data-rating="4.3" data-price="₹₹">
+        <img src="images/restaurant4.jpg" alt="Dragon Bowl" width="300">
+        <h3>Dragon Bowl</h3>
+        <p>Chinese • Noodles • Rice</p>
+        <p>⭐ 4.3</p>
+        <p>₹₹ • 25-40 min</p>
+        <a href="menu.html">
+            <button>View Menu</button>
+        </a>
+    </article>
+</section>
+  <footer>
+   <p>&copy; 2026 FreshBite Online Food System. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>   
+
+
+<!-- =================================================================
+
+     3.MENU PAGE
+
+================================================================== -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - FreshBite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>🍽️ FreshBite</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+<h1>Spice Garden</h1>
+<p>Indian Restaurant • ⭐ 4.8 • 25-35 minutes</p>
+<h2>Our Menu</h2>
+<!-- Food Item 1 -->
+<article>
+    <img src="images/biryani.jpg" alt="Chicken Biryani" width="250">
+    <h3>Chicken Biryani</h3>
+    <p>Aromatic basmati rice cooked with tender chicken and traditional spices.</p>
+    <p><strong>₹350</strong></p>
+    <p>🔴 Non-Veg | 🌾 Gluten-Free</p>
+    <a href="product.html">
+        <button>View Details</button>
+    </a>
+    <button class="add-to-cart">Add to Cart</button>
+</article>
+<!-- Food Item 2 -->
+<article>
+    <img src="images/paneer.jpg" alt="Paneer Butter Masala" width="250">
+    <h3>Paneer Butter Masala</h3>
+    <p>Soft paneer cooked in a creamy tomato gravy.</p>
+    <p><strong>₹280</strong></p>
+    <p>🟢 Veg</p>
+    <a href="product.html">
+        <button>View Details</button>
+    </a>
+    <button class="add-to-cart">Add to Cart</button>
+</article>
+<!-- Food Item 3 -->
+<article>
+    <img src="images/dosa.jpg" alt="Masala Dosa" width="250">
+    <h3>Masala Dosa</h3>
+    <p>Crispy dosa served with potato masala and chutney.</p>
+    <p><strong>₹180</strong></p>
+    <p>🟢 Veg | 🌾 Gluten-Free</p>
+    <a href="product.html">
+        <button>View Details</button>
+    </a>
+    <button class="add-to-cart">Add to Cart</button>
+</article>
+  <footer>
+   <p>&copy; 2026 FreshBite Online Food System. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+<!-- ===========================================================
+
+     4.PRODUCT DETAIL
+
+============================================================ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - FreshBite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>🍽️ FreshBite</h1>
+    <nav>
+        <a href="index.html">Home</a> 
+        <a href="menu.html">Menu</a> 
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+<section>
+    <img src="images/biryani.jpg" alt="Chicken Biryani" width="450">
+    <h1>Chicken Biryani</h1>
+    <h2>₹350</h2>
+    <p>Delicious aromatic chicken biryani made with premium basmati rice and traditional Indian spices.</p>
+    <h3>Dietary Tags</h3>
+    <p>🔴 Non-Veg</p>
+    <p>🌾 Gluten-Free</p>
+    <h3>Ingredients</h3>
+    <ul>
+        <li>Basmati Rice</li>
+        <li>Chicken</li>
+        <li>Onion</li>
+        <li>Tomato</li>
+        <li>Yogurt</li>
+        <li>Saffron</li>
+        <li>Indian Spices</li>
+    </ul>
+    <h3>Nutritional Information</h3>
+    <table border="1">
+        <tr>
+            <th>Nutrient</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td>Calories</td>
+            <td>520 kcal</td>
+        </tr>
+        <tr>
+            <td>Protein</td>
+            <td>28 g</td>
+        </tr>
+        <tr>
+            <td>Carbohydrates</td>
+            <td>62 g</td>
+        </tr>
+        <tr>
+            <td>Fat</td>
+            <td>18 g</td>
+        </tr>
+    </table>
+    <br>
+    <label for="Product-quantity">Quantity:</label>
+    <input type="number" id="Product-quantity" value="1" min="1">
+    <br><br>
+    <button class="add-to-cart">Add to Cart</button>
+</section>
+  <footer>
+   <p>&copy; 2026 FreshBite Online Food System. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+<!-- =========================================================
+
+     5. SHOPPING CART
+    
+========================================================= -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - FreshBite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>🍽️ FreshBite</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
+</header>
+<h2>Shopping Cart</h2>
+<!-- Cart Items -->
+<section>
+    <h3>Your Cart</h3>
+    <div id="cart-items"></div>
+</section>
+<!-- Cart Total -->
+<section>
+    <h3>Order Summary</h3>
+    <p>Subtotal: <span id="subtotal">₹0</span></p>
+    <p>Delivery Fee: <span id="delivery-fee">₹0</span></p>
+    <p>Tax: <span id="tax">₹0</span></p>
+    <h2>Total: <span id="total">₹0</span></h2>
+    <a href="checkout.html">
+        <button type="button">Proceed to Checkout</button>
+    </a>
+</section>
+  <footer>
+   <p>&copy; 2026 FreshBite Online Food System. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+<!-- ===============================================================
+ 
+     6.CHECKOUT PAGE
+
+============================================================== -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Checkout - FreshBite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>🍽️ FreshBite</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart</a>
+        <a href="account.html">Account</a>
+    </nav>
+</header>
+<h2>Checkout</h2>
+<form id="checkout-form">
+    <!-- Delivery Address -->
+    <section>
+        <h3>Delivery Address</h3>
+        <label>Full Name:</label><br>
+        <input type="text" id="full-name" name="fullname" placeholder="Enter your name" required>
+        <br><br>
+        <label>Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+        <br><br>
+        <label>Address:</label><br>
+        <textarea id="address" name="address" rows="4" placeholder="House number, street, area" required></textarea>   
+        <br><br>
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city" placeholder="Enter city" required>
+        <br><br>
+        <label for="pin">PIN Code:</label><br>
+        <input type="text" id="pin" name="pin" placeholder="Enter PIN code" required>
+    </section>
+    <!-- Payment -->
+    <section>
+        <h3>Payment Method</h3>
+        <input type="radio" name="payment" value="upi" checked>
+        <label>UPI</label>
+        <br>
+        <input type="radio" name="payment" value="card">
+        <label>Credit / Debit Card</label>
+        <br>
+        <input type="radio" name="payment" value="cod">
+        <label>Cash on Delivery</label>
+    </section>
+    <!-- Delivery Time -->
+    <section>
+        <h3>Delivery Time</h3>
+        <select>
+            <option>
+                ASAP - 25 to 35 minutes
+            </option>
+            <option>
+                30 Minutes
+            </option>
+            <option>
+                45 Minutes
+            </option>
+            <option>
+                1 Hour
+            </option>
+        </select>
+    </section>
+    <!-- Order Summary -->
+    <section>
+        <h3>Order Summary</h3>
+        <p>Chicken Biryani × 1 — ₹350</p>
+        <p>Delivery Fee — ₹40</p>
+        <p>Tax — ₹20</p>
+        <h2>Total — ₹410</h2>
+        <button type="submit">
+            Place Order
+        </button>
+    </section>
+</form>
+</body>
+</html>
+
+
+<!-- ================================================================
+
+     7.USER ACCOUNT
+
+================================================================ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account -FreshBite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>🍽️ FreshBite</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="cart.html">Cart</a>
+        <a href="account.html">Account</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+<h2>My Account</h2>
+<!-- Profile -->
+<section>
+    <h3>Profile</h3>
+    <p><strong>Name:</strong> Your Name</p>
+    <p><strong>Email:</strong> your@email.com</p>
+    <p><strong>Phone:</strong> +91 9876543210</p>
+    <button>Edit Profile</button>
+</section>
+<!-- Order History -->
+<section>
+    <h3>Order History</h3>
+    <table border="1">
+        <tr>
+            <th>Order ID</th>
+            <th>Food</th>
+            <th>Total</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>#1001</td>
+            <td>Chicken Biryani</td>
+            <td>₹410</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>#1002</td>
+            <td>Pizza</td>
+            <td>₹340</td>
+            <td>Delivered</td>
+        </tr>
+    </table>
+</section>
+<!-- Saved Addresses -->
+<section>
+    <h3>Saved Addresses</h3>
+    <p>
+        <strong>Home:</strong><br>
+        Main Road,<br>
+        Andhra Pradesh, India
+    </p>
+    <button>Add New Address</button>
+</section>
+<!-- Wishlist -->
+<section>
+    <h3>Wishlist ❤️</h3>
+    <ul>
+        <li>Chicken Biryani</li>
+        <li>Margherita Pizza</li>
+        <li>Butter Chicken</li>
+    </ul>
+</section>
+  <footer>
+   <p>&copy; 2026 FreshBite Online Food System. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+<!-- =========================================================
+
+     8. LOGIN / REGISTER
+     
+========================================================= -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register - FreshBite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>🍽️ FreshBite</h1>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="restaurants.html">Restaurants</a> |
+        <a href="menu.html">Menu</a>
+    </nav>
+</header>
+<!-- Login -->
+<section>
+    <h2>Login</h2>
+    <form id="login-form">
+        <label for="login-email">Email:</label><br>
+        <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+        <br><br>
+        <label>Password:</label><br>
+        <input type="password" placeholder="Enter your password" required>
+        <br><br>
+        <button type="submit">
+            Login
+        </button>
+    </form>
+</section>
+<!-- Register -->
+<section>
+    <h2>Register</h2>
+    <form id="register-form">
+        <label>Full Name:</label><br>
+        <input type="text" id="register-name" name="name" placeholder="Enter your full name" required>
+        <br><br>
+        <label>Email:</label><br>
+        <input type="email" id="register-email" name="email" placeholder="Enter your email" required>
+        <br><br>
+        <label>Phone:</label><br>
+        <input type="tel" id="register-phone" name="phone" placeholder="Enter phone number" required>
+        <br><br>
+        <label for="login-password">Password:</label><br>
+        <input type="password" id="register-password" name="password" placeholder="Create password" required>
+        <br><br>
+        <label>Confirm Password:</label><br>
+        <input type="password" id="confirm-password"name="confirmPassword" placeholder="Confirm password" required>
+        <br><br>
+        <button type="submit">
+            Register
+        </button>
+    </form>
+</section>
+</body>
+</html>
+
+
+<!-- =========================================================
+
+     9. ABOUT US
+
+========================================================= -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FreshBite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>🍽️ FreshBite</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a href="account.html">Account</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
+<h2>About FreshBite</h2>
+<section>
+    <h3>Our Story</h3>
+    <p>FreshBite was created to make ordering delicious food simple and convenient.</p>
+    <p>We connect customers with restaurants and help people discover their favorite meals from the comfort of their homes.</p>
+</section>
+<section>
+    <h3>Our Mission</h3>
+    <p>Our mission is to provide customers with delicious food, reliable delivery and a simple online ordering experience.</p>
+</section>
+<section>
+    <h3>Why Choose FreshBite?</h3>
+    <ul>
+        <li>🍕 Wide variety of food choices</li>
+        <li>🍽️ Multiple restaurants</li>
+        <li>🚚 Fast and reliable delivery</li>
+        <li>💰 Affordable prices and special offers</li>
+        <li>📱 Simple and easy online ordering</li>
+    </ul>
+</section>
+  <footer>
+   <p>&copy; 2026 FreshBite Online Food System. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+<!-- ==================================================================
+
+     10.CONTACT US
+
+================================================================= -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FreshBite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>🍽️ FreshBite</h1>
+    <nav> 
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
+    <h2>Contact Us</h2>
+<!-- Location -->
+<section>
+    <h3>📍 Location</h3>
+    <p>Andhra Pradesh, India</p>
+</section>
+<section>
+    <h3>📞 Phone</h3>
+    <p>+91 9876543210</p>
+</section>
+<section>
+    <h3>📧 Email</h3>
+    <p>support@freshbite.com</p>
+</section>
+<section>
+    <h3>🕐 Customer Support</h3>
+    <p>Monday - Sunday: 9:00 AM - 10:00 PM</p>
+</section>
+<section>
+    <h3>Send Us a Message</h3>
+    <form id="contact-form">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter  your email" required>
+        <br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+        <br><br>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+  <footer>
+   <p>&copy; 2026 FreshBite Online Food System. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

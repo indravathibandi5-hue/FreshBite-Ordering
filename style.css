@@ -1,0 +1,1012 @@
+/* =========================================================
+   FRESHBITE - STYLE.CSS
+   Design Rules:
+   Color Scheme: Warm Orange (#FF6B35), Cream (#FFF8F0),
+                 Dark Brown (#2D1B12)
+   Typography: Playful, appetizing, warm
+   Vibe: Cozy, delicious, inviting
+   Layout: Clean, modern, food-focused
+   Responsive: All screen sizes
+   Navigation: Clear menu + smooth scrolling
+========================================================= */
+
+/* =========================================================
+   1. GLOBAL STYLES
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+    background-color: #FFF8F0;
+    color: #2D1B12;
+    line-height: 1.6;
+}
+
+/* Main content spacing */
+body > h1,
+body > h2,
+body > p,
+body > section,
+body > form {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body > h1,
+body > h2 {
+    padding: 35px 20px 10px;
+}
+
+body > p {
+    padding: 0 20px 20px;
+}
+
+/* =========================================================
+   2. NAVIGATION HEADER
+========================================================= */
+
+header,
+.navbar {
+    background-color: #2D1B12;
+    color: #FFF8F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(45, 27, 18, 0.15);
+}
+
+header h1,
+.logo {
+    color: #FF6B35;
+    font-size: 1.7rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-links,
+nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a,
+nav a {
+    color: #FFF8F0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 9px 12px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+nav a:hover {
+    background-color: #FF6B35;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Cart navigation button */
+.nav-links a[href="cart.html"],
+nav a[href="cart.html"] {
+    background-color: #FF6B35;
+    color: white;
+}
+
+/* Hamburger button */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #FFF8F0;
+    border-radius: 5px;
+}
+
+/* =========================================================
+   3. HERO SECTION
+========================================================= */
+
+.hero {
+    min-height: 600px;
+    width: 100%;
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            rgba(45, 27, 18, 0.15),
+            rgba(45, 27, 18, 0.15)
+        ),
+        url("images/hero-banner.jpg");
+
+    background-size: cover;
+    background-postion: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* IMPORTANT:
+   Remove the white box from hero content
+*/
+
+.hero-content {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    width: auto !important;
+    max-width: 800px !important;
+    min-width: 0 !important;
+
+    padding: 30px !important;
+    margin: 0 auto !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    text-align: center;
+    color: white;
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 55px;
+    line-height: 1.15;
+
+    margin: 0 0 20px 0;
+
+    font-weight: 800;
+
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+    color: white;
+   
+    font-size: 20px;
+    line-height: 1.6;
+
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content button {
+    background: #ff6b35;
+    color:white;
+
+    border: none;
+    border-radius: 30px;
+
+    padding: 15px 35px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hero-content button:hover {
+    background: #e85a2a;
+    transform: translateY(-3px) ;
+    box-shadow:0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   4. SECTION STYLING
+========================================================= */
+
+section {
+    padding: 50px 6%;
+}
+
+section h2 {
+    text-align: center;
+    color: #2D1B12;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+section h3 {
+    color: #2D1B12;
+}
+
+section p {
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   5. RESTAURANT CATEGORIES
+========================================================= */
+
+section:first-of-type {
+    text-align: center;
+}
+
+section:first-of-type > div {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 170px;
+    margin: 10px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(45, 27, 18, 0.08);
+    transition: 0.3s ease;
+}
+
+section:first-of-type > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(45, 27, 18, 0.15);
+}
+
+section:first-of-type img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #FF6B35;
+}
+
+section:first-of-type h3 {
+    margin-top: 12px;
+    color: #FF6B35;
+}
+
+/* =========================================================
+   6. FOOD / FEATURED DISH CARDS
+========================================================= */
+
+article {
+    background-color: white;
+    border-radius: 18px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 5px 20px rgba(45, 27, 18, 0.08);
+    transition: 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(45, 27, 18, 0.15);
+}
+
+article img {
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+article h3 {
+    font-size: 1.3rem;
+    margin: 12px 0 8px;
+}
+
+article strong {
+    color: #FF6B35;
+    font-size: 1.2rem;
+}
+
+/* Food card layout */
+section:has(article) {
+    max-width: 1250px;
+    margin: auto;
+}
+
+/* Buttons */
+button {
+    background-color: #FF6B35;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 22px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #e95724;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   7. SPECIAL OFFERS
+========================================================= */
+
+section h3 {
+    margin-top: 15px;
+}
+
+section h3 + p {
+    margin-bottom: 18px;
+}
+
+/* Offer section */
+body > section:nth-of-type(4) {
+    text-align: center;
+    background-color: #FFE5D6;
+    max-width: 1100px;
+    margin: 40px auto;
+    border-radius: 25px;
+}
+
+body > section:nth-of-type(4) h3 {
+    color: #FF6B35;
+    font-size: 1.4rem;
+}
+
+/* =========================================================
+   8. RESTAURANT LISTING
+========================================================= */
+
+.restaurant-card {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 40px);
+    min-height: 450px;
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.restaurant-card p {
+    color: #5f4a40;
+}
+
+.restaurant-card p:nth-of-type(2) {
+    color: #FF6B35;
+    font-weight: bold;
+}
+
+/* Restaurant filters */
+section:has(#cuisine-filter) {
+    background-color: white;
+    max-width: 1100px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(45, 27, 18, 0.08);
+}
+
+section:has(#cuisine-filter) h3 {
+    color: #FF6B35;
+    margin-bottom: 15px;
+}
+
+select {
+    padding: 10px 15px;
+    border: 2px solid #FFD2BD;
+    border-radius: 10px;
+    background-color: #FFF8F0;
+    color: #2D1B12;
+    font-size: 1rem;
+    outline: none;
+}
+
+select:focus {
+    border-color: #FF6B35;
+}
+
+/* =========================================================
+   9. MENU PAGE
+========================================================= */
+
+body > h1 {
+    color: #FF6B35;
+}
+
+body > h1 + p {
+    color: #6a5146;
+}
+
+body > h1 + p + h2 {
+    text-align: center;
+}
+
+body > article {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.33% - 40px);
+    min-height: 520px;
+}
+
+.add-to-cart {
+    margin-left: 5px;
+}
+
+/* =========================================================
+   10. PRODUCT DETAILS
+========================================================= */
+
+section:has(table) {
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px rgba(45, 27, 18, 0.1);
+}
+
+section:has(table) > img {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 20px;
+}
+
+section:has(table) h1 {
+    text-align: center;
+    color: #FF6B35;
+    font-size: 2.5rem;
+}
+
+section:has(table) h2 {
+    color: #FF6B35;
+    text-align: center;
+}
+
+section:has(table) ul {
+    padding-left: 25px;
+}
+
+section:has(table) li {
+    margin: 5px 0;
+}
+
+/* Quantity input */
+input[type="number"] {
+    width: 80px;
+    padding: 10px;
+    border: 2px solid #FFD2BD;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #FF6B35;
+}
+
+/* =========================================================
+   11. TABLES
+========================================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+th {
+    background-color: #FF6B35;
+    color: white;
+    padding: 13px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #FFD9C8;
+}
+
+tr:hover td {
+    background-color: #FFF3EB;
+}
+
+/* =========================================================
+   12. SHOPPING CART
+========================================================= */
+
+#cart-items {
+    min-height: 100px;
+}
+
+section:has(#cart-items) {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(45, 27, 18, 0.08);
+}
+
+section:has(#cart-items) h3 {
+    color: #FF6B35;
+}
+
+section:has(#subtotal) {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #FFE5D6;
+    border-radius: 20px;
+}
+
+section:has(#subtotal) p {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #FFD2BD;
+}
+
+section:has(#subtotal) h2 {
+    color: #FF6B35;
+}
+
+/* =========================================================
+   13. CHECKOUT PAGE
+========================================================= */
+
+#checkout-form {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+#checkout-form section {
+    background-color: white;
+    margin: 20px 0;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(45, 27, 18, 0.08);
+}
+
+#checkout-form h3 {
+    color: #FF6B35;
+    margin-bottom: 20px;
+}
+
+#checkout-form input,
+#checkout-form textarea,
+#checkout-form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 2px solid #FFD2BD;
+    border-radius: 10px;
+    background-color: #FFF8F0;
+    color: #2D1B12;
+    font-size: 1rem;
+}
+
+#checkout-form input:focus,
+#checkout-form textarea:focus,
+#checkout-form select:focus {
+    outline: none;
+    border-color: #FF6B35;
+}
+
+#checkout-form input[type="radio"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+#checkout-form button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+}
+
+/* =========================================================
+   14. ACCOUNT PAGE
+========================================================= */
+
+body > section:has(table) {
+    max-width: 1000px;
+}
+
+body > section:has(table) p {
+    color: #5f4a40;
+}
+
+body > section:has(table) button {
+    margin-top: 10px;
+}
+
+/* Wishlist */
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin: 8px 0;
+}
+
+/* =========================================================
+   15. LOGIN / REGISTER
+========================================================= */
+
+section:has(#login-form),
+section:has(#register-form) {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 22px;
+    box-shadow: 0 7px 25px rgba(45, 27, 18, 0.1);
+}
+
+section:has(#login-form) h2,
+section:has(#register-form) h2 {
+    color: #FF6B35;
+}
+
+#login-form input,
+#register-form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 2px solid #FFD2BD;
+    border-radius: 10px;
+    background-color: #FFF8F0;
+    color: #2D1B12;
+}
+
+#login-form input:focus,
+#register-form input:focus {
+    outline: none;
+    border-color: #FF6B35;
+}
+
+#login-form button,
+#register-form button {
+    width: 100%;
+    padding: 13px;
+}
+
+/* =========================================================
+   16. ABOUT US
+========================================================= */
+
+section:not(.hero):not(:has(article)):not(:has(table)):not(:has(form)):not(:has(#cart-items)) {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+section:not(:has(article)):not(:has(table)):not(:has(form)):not(:has(#cart-items)) h3 {
+    color: #FF6B35;
+    font-size: 1.4rem;
+}
+
+section:not(:has(article)):not(:has(table)):not(:has(form)):not(:has(#cart-items)) ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section:not(:has(article)):not(:has(table)):not(:has(form)):not(:has(#cart-items)) li {
+    background-color: white;
+    padding: 12px 18px;
+    margin: 8px 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(45, 27, 18, 0.06);
+}
+
+/* =========================================================
+   17. CONTACT PAGE
+========================================================= */
+
+#contact-form {
+    max-width: 700px;
+    margin: auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #FFD2BD;
+    border-radius: 10px;
+    background-color: #FFF8F0;
+    color: #2D1B12;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #FF6B35;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form button {
+    width: 100%;
+}
+
+/* =========================================================
+   18. FOOTER
+========================================================= */
+
+footer {
+    background-color: #2D1B12;
+    color: #FFF8F0;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* =========================================================
+   19. LINKS
+========================================================= */
+
+a {
+    color: #FF6B35;
+}
+
+a:hover {
+    color: #e95724;
+}
+
+/* =========================================================
+   20. RESPONSIVE DESIGN - TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    header,
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .nav-links,
+    nav {
+        gap: 3px;
+    }
+
+    .nav-links a,
+    nav a {
+        padding: 8px 7px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    body > article {
+        width: calc(50% - 40px);
+    }
+
+    .restaurant-card {
+        width: calc(50% - 40px);
+    }
+}
+
+/* =========================================================
+   21. RESPONSIVE DESIGN - MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    header,
+    .navbar {
+        flex-wrap: wrap;
+        padding: 15px 20px;
+    }
+
+    .logo,
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links,
+    nav {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 15px;
+    }
+
+    .nav-links.active,
+    nav.active {
+        display: flex;
+    }
+
+    .nav-links a,
+    nav a {
+        text-align: center;
+        width: 100%;
+        padding: 11px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 35px 20px;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Categories */
+    section:first-of-type > div {
+        width: 140px;
+        margin: 7px;
+    }
+
+    section:first-of-type img {
+        width: 110px;
+        height: 110px;
+    }
+
+    /* Food cards */
+    body > article,
+    .restaurant-card {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    article img {
+        width: 100%;
+        height: 220px;
+    }
+
+    /* Product */
+    section:has(table) > img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Tables */
+    table {
+        font-size: 0.85rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    /* Checkout */
+    #checkout-form {
+        padding: 10px;
+    }
+
+    #checkout-form section {
+        padding: 20px;
+    }
+}
+
+/* =========================================================
+   22. SMALL MOBILE DEVICES
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero button {
+        width: 100%;
+    }
+
+    section:first-of-type > div {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    section:first-of-type img {
+        width: 120px;
+        height: 120px;
+    }
+
+    body > h1,
+    body > h2 {
+        font-size: 1.7rem;
+    }
+
+    article {
+        padding: 15px;
+    }
+
+    article img {
+        height: 190px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    footer {
+        font-size: 0.85rem;
+    }
+}
+
+/* =========================================================
+   23. ACCESSIBILITY / FOCUS
+========================================================= */
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid rgba(255, 107, 53, 0.3);
+    outline-offset: 2px;
+}
+
+/* =========================================================
+   24. SMOOTH CARD ANIMATION
+========================================================= */
+
+article,
+.restaurant-card,
+section {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
