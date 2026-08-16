@@ -1,0 +1,91 @@
+<!-- ===============================================================
+ 
+     6.CHECKOUT PAGE
+
+============================================================== -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Checkout - FreshBite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>🍽️ FreshBite</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cart.html">Cart</a>
+        <a href="account.html">Account</a>
+    </nav>
+</header>
+<h2>Checkout</h2>
+<form id="checkout-form">
+    <!-- Delivery Address -->
+    <section>
+        <h3>Delivery Address</h3>
+        <label>Full Name:</label><br>
+        <input type="text" id="full-name" name="fullname" placeholder="Enter your name" required>
+        <br><br>
+        <label>Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+        <br><br>
+        <label>Address:</label><br>
+        <textarea id="address" name="address" rows="4" placeholder="House number, street, area" required></textarea>   
+        <br><br>
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city" placeholder="Enter city" required>
+        <br><br>
+        <label for="pin">PIN Code:</label><br>
+        <input type="text" id="pin" name="pin" placeholder="Enter PIN code" required>
+    </section>
+    <!-- Payment -->
+    <section>
+        <h3>Payment Method</h3>
+        <input type="radio" name="payment" value="upi" checked>
+        <label>UPI</label>
+        <br>
+        <input type="radio" name="payment" value="card">
+        <label>Credit / Debit Card</label>
+        <br>
+        <input type="radio" name="payment" value="cod">
+        <label>Cash on Delivery</label>
+    </section>
+    <!-- Delivery Time -->
+    <section>
+        <h3>Delivery Time</h3>
+        <select>
+            <option>
+                ASAP - 25 to 35 minutes
+            </option>
+            <option>
+                30 Minutes
+            </option>
+            <option>
+                45 Minutes
+            </option>
+            <option>
+                1 Hour
+            </option>
+        </select>
+    </section>
+    <!-- Order Summary -->
+    <section>
+        <h3>Order Summary</h3>
+        <p>Chicken Biryani × 1 — ₹350</p>
+        <p>Delivery Fee — ₹40</p>
+        <p>Tax — ₹20</p>
+        <h2>Total — ₹410</h2>
+        <button type="submit">
+            Place Order
+        </button>
+    </section>
+</form>
+</body>
+</html>
+

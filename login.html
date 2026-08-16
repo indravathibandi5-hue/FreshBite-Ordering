@@ -1,0 +1,67 @@
+<!-- =========================================================
+
+     8. LOGIN / REGISTER
+     
+========================================================= -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register - FreshBite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>🍽️ FreshBite</h1>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="restaurants.html">Restaurants</a> |
+        <a href="menu.html">Menu</a>
+    </nav>
+</header>
+<!-- Login -->
+<section>
+    <h2>Login</h2>
+    <form id="login-form">
+        <label for="login-email">Email:</label><br>
+        <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+        <br><br>
+        <label>Password:</label><br>
+        <input type="password" placeholder="Enter your password" required>
+        <br><br>
+        <button type="submit">
+            Login
+        </button>
+    </form>
+</section>
+<!-- Register -->
+<section>
+    <h2>Register</h2>
+    <form id="register-form">
+        <label>Full Name:</label><br>
+        <input type="text" id="register-name" name="name" placeholder="Enter your full name" required>
+        <br><br>
+        <label>Email:</label><br>
+        <input type="email" id="register-email" name="email" placeholder="Enter your email" required>
+        <br><br>
+        <label>Phone:</label><br>
+        <input type="tel" id="register-phone" name="phone" placeholder="Enter phone number" required>
+        <br><br>
+        <label for="login-password">Password:</label><br>
+        <input type="password" id="register-password" name="password" placeholder="Create password" required>
+        <br><br>
+        <label>Confirm Password:</label><br>
+        <input type="password" id="confirm-password"name="confirmPassword" placeholder="Confirm password" required>
+        <br><br>
+        <button type="submit">
+            Register
+        </button>
+    </form>
+</section>
+</body>
+</html>
+

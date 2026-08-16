@@ -1,0 +1,104 @@
+<!-- ========================================================
+
+     2.RESTAURANT LISTING
+
+======================================================== -->
+ 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants - FreshBite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>🍽️ FreshBite</h1>
+    <nav> 
+        <a href="index.html">Home</a>
+        <a href="restaurants.html">Restaurants</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a href="account.html">Account</a>
+    </nav>
+</header>
+<h2>Restaurants</h2>
+<p>Find the best restaurants near you and order delicious food delivered to your doorstep.</p>
+<!-- Filters -->
+<section>
+    <h3>Filter Restaurants</h3>
+    <label>Cuisine:</label>
+    <select id="cuisine-filter">
+        <option value="all">All Cuisines</option>
+        <option value="Indian">Indian</option>
+        <option value="Italian">Italian</option>
+        <option value="Chinese">Chinese</option>
+        <option value="American">American</option>
+    </select>
+    <br><br>
+    <label>Rating:</label>
+    <select id="rating-filter">
+        <option value="all">All Ratings</option>
+        <option value="4">4 Stars & Above</option>
+        <option value="4.5">4.5 Stars & Above</option>
+    </select>
+    <br><br>
+    <label>Price:</label>
+    <select id="price-filter">
+        <option value="all">All Prices</option>
+        <option value="₹">₹</option>
+        <option value="₹₹">₹₹</option>
+        <option value="₹₹₹">₹₹₹</option>
+    </select>
+</section> 
+<!-- Restaurant Grid -->
+<section>
+    <article class="restaurant-card" data-cuisine="Indian" data-rating="4.8" data-price="₹₹">
+        <img src="images/restaurant1.jpg" alt="Spice Garden" width="300">
+        <h3>Spice Garden</h3>
+        <p>Indian • Biryani • Curry</p>
+        <p>⭐ 4.8</p>
+        <p>₹₹ • 25-35 min</p>
+        <a href="menu.html">
+            <button>View Menu</button>
+        </a>
+    </article>
+    <article class="restaurant-card" data-cuisine="Italian" data-rating="4.6" data-price="₹₹">
+        <img src="images/restaurant2.jpg" alt="Pizza Palace" width="300">
+        <h3>Pizza Palace</h3>
+        <p>Italian • Pizza • Pasta</p>
+        <p>⭐ 4.6</p>
+        <p>₹₹ • 20-30 min</p>
+        <a href="menu.html">
+            <button>View Menu</button>
+        </a>
+    </article>
+    <article class="restaurant-card" data-cuisine="American" data-rating="4.5" data-price="₹">
+        <img src="images/restaurant3.jpg" alt="Burger House" width="300">
+        <h3>Burger House</h3>
+        <p>American • Burgers • Fries</p>
+        <p>⭐ 4.5</p>
+        <p>₹ • 15-25 min</p>
+        <a href="menu.html">
+            <button>View Menu</button>
+        </a>
+    </article>
+    <article class="restaurant-card" data-cuisine="Chinese" data-rating="4.3" data-price="₹₹">
+        <img src="images/restaurant4.jpg" alt="Dragon Bowl" width="300">
+        <h3>Dragon Bowl</h3>
+        <p>Chinese • Noodles • Rice</p>
+        <p>⭐ 4.3</p>
+        <p>₹₹ • 25-40 min</p>
+        <a href="menu.html">
+            <button>View Menu</button>
+        </a>
+    </article>
+</section>
+  <footer>
+   <p>&copy; 2026 FreshBite Online Food System. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>   

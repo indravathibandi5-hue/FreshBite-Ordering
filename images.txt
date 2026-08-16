@@ -1,0 +1,16 @@
+        <img src="images/pizza.jpg" alt="Pizza" width="150" height="150">
+        <img src="images/burger.jpg" alt="Burger" width="150" height="150">
+        <img src="images/indian.jpg" alt="Indian Food" width="150" height="150">
+        <img src="images/chinese.jpg" alt="Chinese Food" width="150" height="150">
+        <img src="images/dessert.jpg" alt="Desserts" width="150" height="150">
+        <img src="images/biryani.jpg" alt="Chicken Biryani" width="250">
+        <img src="images/pizza.jpg" alt="Margherita Pizza" width="250">
+        <img src="images/burger.jpg" alt="Classic Burger" width="250">
+        <img src="images/restaurant1.jpg" alt="Spice Garden" width="300">
+        <img src="images/restaurant2.jpg" alt="Pizza Palace" width="300">
+        <img src="images/restaurant3.jpg" alt="Burger House" width="300">
+        <img src="images/restaurant4.jpg" alt="Dragon Bowl" width="300">
+        <img src="images/biryani.jpg" alt="Chicken Biryani" width="250">
+        <img src="images/paneer.jpg" alt="Paneer Butter Masala" width="250">
+        <img src="images/dosa.jpg" alt="Masala Dosa" width="250">
+        <img src="images/biryani.jpg" alt="Chicken Biryani" width="450">
